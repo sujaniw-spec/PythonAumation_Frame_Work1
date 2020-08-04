@@ -33,7 +33,7 @@ class TestLogin():
             logout.click_welcome()
             logout.click_logout()
             x = driver.title
-            assert x == "OrangeHRM1"
+            assert x == "OrangeHRM"
         except AssertionError as error:
             print("Assertion error has occurred")
             print(error)
@@ -42,7 +42,7 @@ class TestLogin():
             screenshotname = testname+"_"+currentTime
             allure.attach(self.driver.get_screenshot_as_png(),name=screenshotname,
             attachment_type=allure.attachment_type.PNG)
-            driver.get_screenshot_as_file("C:/Users/sujan/PycharmProjects/POM-Projects/Aumation_Frame_Work1/screenshots/"+screenshotname+".jpg")
+            driver.get_screenshot_as_file("C:/Users/sujan/PycharmProjects/POM-Projects/Aumation_Frame_Work1/screenshots/"+screenshotname+".PNG")
             raise
         except:
             print("There was as exception")
